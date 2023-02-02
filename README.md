@@ -25,3 +25,11 @@ Look at images provided by SME gathered by drone footage to identify/detect crac
 - An algorithm that can correctly identify cracks
 
 - Classification of different sizes and types of cracks
+
+## Code
+
+`LoadImage.py`: Loads in an image and cuts it into equally sized squares. To run this code,
+you need to have a `data\` folder containing the image file.
+
+`SaveCutImages.py`: Takes the image dictionary loaded in by `LoadImage.py` and saves each cut
+to its own .tif file. To run this code, you need to have a `results\` folder.
