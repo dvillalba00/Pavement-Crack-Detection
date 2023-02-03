@@ -22,7 +22,9 @@ Look at images provided by SME gathered by drone footage to identify/detect crac
 
 *These will become more specific the more we learn about pavement cracks and meet with sponsor*
 
-- An algorithm that can correctly identify cracks
+- An alogrithm that identifies cracks using image segmentation and global thresholding  techniques
+
+- Build off global threholding model with local or dynamic thresholding algorithm
 
 - Classification of different sizes and types of cracks
 
