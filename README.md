@@ -28,7 +28,8 @@ Look at images provided by SME gathered by drone footage to identify/detect crac
 
 - Classification of different sizes and types of cracks
 
-## Code
+## Code  
+### IMPORTANT: Do not run any of these scripts outside of the `src/` directory. All of these scripts currently use relative paths. This will be fixed in the future.
 
 `LoadImage.py`: Loads in an image and cuts it into equally sized squares. To run this code,
 you need to have a `data\` folder containing the image file.
