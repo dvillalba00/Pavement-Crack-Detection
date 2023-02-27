@@ -37,14 +37,14 @@ Look at images provided by SME gathered by drone footage to identify/detect crac
 
 ## Code  
 
-* `createPaths` from `CreatePaths.py`: Create all of the folders that are passed in as a list of strings.
+* `createPaths`: Create all of the folders that are passed in as a list of strings.
 
-* `loadImage` from `LoadImage.py`: Loads in an image and cuts it into roughly equally sized rectangles depending on the **DIVIDE_X** and **DIVIDE_Y** global variables. This returns a dictionary of cut images where the key is a tuple representing the location of the image from the original.
+* `loadImage`: Loads in an image and cuts it into roughly equally sized rectangles depending on the **DIVIDE_X** and **DIVIDE_Y** global variables. This returns a dictionary of cut images where the key is a tuple representing the location of the image from the original.
 
-  * `saveCutImages` from `SaveCutImages.py`: Takes the image dictionary created by the loadImage function from `LoadImage.py` and saves each cut image to its own .tif file.
+  * `saveCutImages`: Takes the image dictionary created by the loadImage function from `LoadImage.py` and saves each cut image to its own .tif file.
 
-* `thresholdCutImages` from `ThresholdCutImages.py`: Takes in the dictionary of cut images and a thresholding function. It thresholds each image and applies that threshold to each image. Returns a dictionary of thresholded images with the same keys as **cut_img_dict**.
+* `thresholdCutImages: Takes in the dictionary of cut images and a thresholding function. It thresholds each image and applies that threshold to each image. Returns a dictionary of thresholded images with the same keys as **cut_img_dict**.
 
-  * `saveThresholdedImages` from `SaveThresholdedImages.py`: Takes in the dictionary thresholded images created by `thresholdCutImages`. It then saves each thresholded image to its own .tif file.
+  * `saveThresholdedImages`: Takes in the dictionary thresholded images created by `thresholdCutImages`. It then saves each thresholded image to its own .tif file.
 
 
