@@ -36,10 +36,15 @@ Look at images provided by SME gathered by drone footage to identify/detect crac
 - Classification of different sizes and types of cracks
 
 ## Code  
-### IMPORTANT: Do not run any of these scripts outside of the `src/` directory. All of these scripts currently use relative paths. This will be fixed in the future.
 
-`LoadImage.py`: Loads in an image and cuts it into equally sized squares. To run this code,
-you need to have a `data\` folder containing the image file.
+* `createPaths` from `CreatePaths.py`: Create all of the folders that are passed in as a list of strings.
 
-`SaveCutImages.py`: Takes the image dictionary loaded in by `LoadImage.py` and saves each cut
-to its own .tif file. To run this code, you need to have a `results\` folder.
+* `loadImage` from `LoadImage.py`: Loads in an image and cuts it into roughly equally sized rectangles depending on the **DIVIDE_X** and **DIVIDE_Y** global variables. This returns a dictionary of cut images where the key is a tuple representing the location of the image from the original.
+
+  * `saveCutImages` from `SaveCutImages.py`: Takes the image dictionary created by the loadImage function from `LoadImage.py` and saves each cut image to its own .tif file.
+
+* `thresholdCutImages` from `ThresholdCutImages.py`: Takes in the dictionary of cut images and a thresholding function. It thresholds each image and applies that threshold to each image. Returns a dictionary of thresholded images with the same keys as **cut_img_dict**.
+
+  * `saveThresholdedImages` from `SaveThresholdedImages.py`: Takes in the dictionary thresholded images created by `thresholdCutImages`. It then saves each thresholded image to its own .tif file.
+
+
