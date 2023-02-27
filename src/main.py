@@ -1,3 +1,4 @@
+import argparse
 from skimage.filters import threshold_multiotsu
 from CreatePaths import createPaths
 from LoadImage import loadImage
@@ -5,11 +6,19 @@ from SaveCutImages import saveCutImages
 from ThresholdCutImages import thresholdCutImages
 from SaveThresholdedImages import saveThresholdedImages
 
-# import image
-IMAGE_FILE = "../data/Kzoo_Office_v5_orthomosaic.tif"
+# argparser for CLI usage
+parser = argparse.ArgumentParser(description="Thresholds images to find cracks in pavement based on a tiff file image")
+parser.add_argument('-x', type=int, help="sets the width value when cutting images")
+parser.add_argument('-y', type=int, help="sets the height value when cutting images")
+parser.add_argument('-f', '--file', dest="filename", help="name of the image you want to process")
+args = parser.parse_args()
+
+# set image file name
+filename = args.filename if args.filename else "Kzoo_Office_v5_orthomosaic"
+IMAGE_FILE = "../data/{}.tif".format(filename)
 # horizontal and vertical size cuts to make
-DIVIDE_X = 25
-DIVIDE_Y = 25
+DIVIDE_X = args.x if args.x else 25
+DIVIDE_Y = args.y if args.y else 25
 
 # paths to cut image, thresholded cut images
 paths = [
