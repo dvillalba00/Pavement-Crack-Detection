@@ -1,10 +1,9 @@
 import numpy as np
-import skimage
 from skimage import io
 
 def loadImage(IMAGE_FILE, DIVIDE_X, DIVIDE_Y):
     # Read in the image file.
-    img = io.imread(IMAGE_FILE) 
+    img = io.imread(IMAGE_FILE)
 
     # Create the framework for cutting the image.
     maxx = img.shape[0]

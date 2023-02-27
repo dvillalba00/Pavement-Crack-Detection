@@ -1,7 +1,6 @@
 import numpy as np
-from skimage.filters import threshold_multiotsu
 
-def thresholdCutImages(cut_img_dict, thresholding_function)
+def thresholdCutImages(cut_img_dict, thresholding_function):
     thresholded_dict = {}
     for key in cut_img_dict:
         if len(np.unique(cut_img_dict[key])) < 3:
