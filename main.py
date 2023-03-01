@@ -1,13 +1,13 @@
 import os
 from skimage.filters import threshold_multiotsu
-from CreatePaths import createPaths
-from LoadImage import loadImage
-from SaveCutImages import saveCutImages
-from ThresholdCutImages import thresholdCutImages
-from SaveThresholdedImages import saveThresholdedImages
-from ArgParser import parseArgs
+from src.CreatePaths import createPaths
+from src.LoadImage import loadImage
+from src.SaveCutImages import saveCutImages
+from src.ThresholdCutImages import thresholdCutImages
+from src.SaveThresholdedImages import saveThresholdedImages
+from src.ArgParser import parseArgs
 
-dir_path = '/'.join(os.path.realpath(__file__).split('/')[:-2])
+dir_path = '/'.join(os.path.realpath(__file__).split('/')[:-1])
 
 # argparser for CLI usage
 args = parseArgs()
