@@ -13,11 +13,11 @@ dir_path = '/'.join(os.path.realpath(__file__).split('/')[:-2])
 args = parseArgs()
 
 # set image file name
-filename = args.filename if args.filename else "Kzoo_Office_v5_orthomosaic"
+filename = args.filename
 IMAGE_FILE = "{dir}/data/{name}.tif".format(dir=dir_path, name=filename)
 # horizontal and vertical size cuts to make
-DIVIDE_X = args.x if args.x else 25
-DIVIDE_Y = args.y if args.y else 25
+DIVIDE_X = args.x
+DIVIDE_Y = args.y
 
 # paths to cut image, thresholded cut images
 paths = [

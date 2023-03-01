@@ -35,16 +35,34 @@ Look at images provided by SME gathered by drone footage to identify/detect crac
 
 - Classification of different sizes and types of cracks
 
-## Code  
+## Installation instructions
+
+view `INSTALL.md` for more information on installation and setup
+
+## Code
 
 * `createPaths`: Create all of the folders that are passed in as a list of strings.
 
 * `loadImage`: Loads in an image and cuts it into roughly equally sized rectangles depending on the **DIVIDE_X** and **DIVIDE_Y** global variables. This returns a dictionary of cut images where the key is a tuple representing the location of the image from the original.
 
-  * `saveCutImages`: Takes the image dictionary created by the loadImage function and saves each cut image to its own .tif file.
+* `saveCutImages`: Takes the image dictionary created by the loadImage function and saves each cut image to its own .tif file.
 
 * `thresholdCutImages`: Takes in the dictionary of cut images and a thresholding function. It thresholds each image and applies that threshold to each image. Returns a dictionary of thresholded images with the same keys as **cut_img_dict**.
 
-  * `saveThresholdedImages`: Takes in the dictionary thresholded images created by the thresholdCutImages function. It then saves each thresholded image to its own .tif file.
+* `saveThresholdedImages`: Takes in the dictionary thresholded images created by the thresholdCutImages function. It then saves each thresholded image to its own .tif file.
 
+## Running the code
 
+To run the program on an image, first create a data folder on the root of the project that contains the main `.tif` file that you want thresholded.
+
+Once the image is in the data folder, you can then run the following command in the root of the project in order to run the program.
+
+`python3 main.py -f [FILENAME]`
+
+## Flag options for running main.py
+
+* `-f FILENAME`: Required. Runs the program on the file listed as FILENAME.
+
+* `-x [number]`: Sets the pixel width for segmenting the images to the number provided. Default: 25
+
+* `-y [number]`: Sets the pixel height for segmenting the images to the number provided. Default: 25
