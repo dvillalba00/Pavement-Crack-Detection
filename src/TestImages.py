@@ -2,7 +2,7 @@ import numpy as np
 import os
 from skimage import io
 
-def loadLabeledImages(path, images, color=(0,0,0,255):
+def loadLabeledImages(path, images, color=(0,0,0,255)):
     """
     Loads in the the hand traced images and creates a binary image 
     of black pixels vs rest

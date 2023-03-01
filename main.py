@@ -6,6 +6,7 @@ from src.SaveCutImages import saveCutImages
 from src.ThresholdCutImages import thresholdCutImages
 from src.SaveThresholdedImages import saveThresholdedImages
 from src.ArgParser import parseArgs
+from src.TestImages import loadLabeledImages, saveLabeledCutImages, testImages
 
 dir_path = '/'.join(os.path.realpath(__file__).split('/')[:-1])
 
@@ -24,7 +25,8 @@ paths = [
     "/data",
     "/results",
     "/results/raw_cut_images",
-    "/results/thresholded_cut_images"
+    "/results/thresholded_cut_images",
+    "/results/labeled_cut_images"
 ]
 
 # user chosen function for thresholding
