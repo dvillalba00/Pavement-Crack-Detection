@@ -1,4 +1,4 @@
 imagecodecs
 argparse
-skimage
+scikit-image
 numpy
