@@ -2,6 +2,16 @@ import numpy as np
 from skimage import io
 
 def loadImage(IMAGE_FILE, DIVIDE_X, DIVIDE_Y):
+    '''
+
+    Args:
+        IMAGE_FILE: the image to be loaded
+        DIVIDE_X:
+        DIVIDE_Y:
+
+    Returns:
+
+    '''
     # Read in the image file.
     img = io.imread(IMAGE_FILE)
 
