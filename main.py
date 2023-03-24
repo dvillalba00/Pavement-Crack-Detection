@@ -1,5 +1,6 @@
 import os
 from skimage.filters import threshold_multiotsu
+from src.StitchImageDict import stitchImageDict
 from src.CreatePaths import createPaths
 from src.LoadImage import loadImage
 from src.SaveCutImages import saveCutImages
@@ -15,7 +16,7 @@ args = parseArgs()
 
 # set image file name
 filename = args.filename
-IMAGE_FILE = "{dir}/data/{name}.tif".format(dir=dir_path, name=filename)
+IMAGE_FILE = "{dir}/data/raw_images/{name}.tif".format(dir=dir_path, name=filename)
 # horizontal and vertical size cuts to make
 DIVIDE_X = args.x
 DIVIDE_Y = args.y
@@ -32,11 +33,12 @@ paths = [
 # user chosen function for thresholding
 thresholding_function = threshold_multiotsu
 
-createPaths(paths, dir_path) # create path for image
+# createPaths(paths, dir_path) # create path for image
 cut_img_dict = loadImage(IMAGE_FILE, DIVIDE_X, DIVIDE_Y) # image, amount of cuts
 # saveCutImages(cut_img_dict, dir_path) # saving cut image to later threshold
-thresholded_dict = thresholdCutImages(cut_img_dict, thresholding_function) # run cut images through threshold function
+# thresholded_dict = thresholdCutImages(cut_img_dict, thresholding_function) # run cut images through threshold function
 # saveThresholdedImages(thresholded_dict, dir_path) # save threshold images
-labeled_image_dict = loadLabeledImages(dir_path + '/data/ground_truth', dir_path + '/LabeledImages.txt')
-saveLabeledCutImages(labeled_image_dict)
+stitchImageDict(cut_img_dict, dir_path) # stitch the cut thresholded images back together
+# labeled_image_dict = loadLabeledImages(dir_path + '/data/ground_truth', dir_path + '/LabeledImages.txt')
+# saveLabeledCutImages(labeled_image_dict)
 
