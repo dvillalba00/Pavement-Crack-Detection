@@ -15,12 +15,10 @@ Crack Detection software for SME
 
 Analyze the images from drone footage provided by SME identify cracks in asphalt pavement. This is achieved by segmenting the image and using thresholding methods.
 
-### Expected Outcomes:
+### Expected Outcomes
 
 - An model that identifies cracks using image segmentation and global thresholding techniques
-
 - Produce image that is thresholded and identifies cracks
-
 - Allow different types of thresholding methods to be used for image
 
 ### Team Members
@@ -56,8 +54,13 @@ view `INSTALL.md` for more information on installation and setup
 ### Running the code
 
 1. Clone the repository locally: `git clone https://gitlab.msu.edu/villalb7/Pavement-Crack-Detection.git`
+
 2. Move into the Pavement-Crack-Detection folder: `cd Pavement-Crack-Detection`
-3. Make a `data` folder in the repository: `mkdir data `
-4. Upload the `.tif` image into the `data `folder that is to be thresholded
+
+3. Make a `data` folder in the repository: `mkdir data`
+
+4. Upload the `.tif` image into the `data` folder that is to be thresholded
+
 5. Now the environment is set up for the jupyter notebook. While in the Pavement-Crack-Detection folder, open jupyter notebook locally from your terminal.
+
 6. Open the `InteractiveCrackDetection.ipynb` and follow along with the image segmentation and thresholding steps in the notebook.
