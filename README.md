@@ -11,17 +11,17 @@ Crack Detection software for SME
 
 ## Project Description
 
-### Team Purpose
+#### Team Purpose
 
 Analyze the images from drone footage provided by SME identify cracks in asphalt pavement. This is achieved by segmenting the image and using thresholding methods.
 
-### Expected Outcomes
+#### Expected Outcomes
 
 - An model that identifies cracks using image segmentation and global thresholding techniques
 - Produce image that is thresholded and identifies cracks
 - Allow different types of thresholding methods to be used for image
 
-### Team Members
+#### Team Members
 
 - Daniel Villalba
 - Alder Fulton
@@ -29,7 +29,7 @@ Analyze the images from drone footage provided by SME identify cracks in asphalt
 - Akash Gupta
 - Noor Alhaidari
 
-### Team Proposal Video
+#### Team Proposal Video
 
 [Proposal Video](https://mediaspace.msu.edu/media/SME_Proposal_Video/1_zyp7lfsq)
 
@@ -45,13 +45,13 @@ view `INSTALL.md` for more information on installation and setup
 
 ## Running the project
 
-### Code
+#### Code
 
 * `InteractiveCrackDetection.ipynb`: jupyter notebook containing code that walks through each step of our image segmentation and thresholding process. Comments are included in the notebook for users to understand each step in our model from beginning to end. 
 
 * `src`: directory containing the functions created and used to execute `InteractiveCrackDetection.ipynb`
 
-### Running the code
+#### Running the code
 
 1. Clone the repository locally: `git clone https://gitlab.msu.edu/villalb7/Pavement-Crack-Detection.git`
 
