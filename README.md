@@ -3,9 +3,9 @@
 Crack Detection software for SME
 
 # Table of Contents
-* [Project Description] (https://gitlab.msu.edu/villalb7/Pavement-Crack-Detection#project-description)
+* [Project Description](#project-description)
 * [Installation](#installation)
-* [Running the project] (https://gitlab.msu.edu/villalb7/Pavement-Crack-Detection#project-description#running-the-project)
+* [Running the project](#running-the-project)
 
 
 
