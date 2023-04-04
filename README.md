@@ -49,7 +49,7 @@ view `INSTALL.md` for more information on installation and setup
 
 * `InteractiveCrackDetection.ipynb`: jupyter notebook containing code that walks through each step of our image segmentation and thresholding process. Comments are included in the notebook for users to understand each step in our model from beginning to end. 
 
-* `src`: directory containing the functions created and used to execute `InteractiveCrackDetection.ipynb`
+* `src`: directory containing the functions created for and used in executing `InteractiveCrackDetection.ipynb`
 
 #### Running the code
 
