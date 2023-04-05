@@ -39,7 +39,7 @@ Analyze the images from drone footage provided by SME identify cracks in asphalt
 
 ## Installation
 
-view `INSTALL.md` for more information on installation and setup
+view [`INSTALL.md`](https://gitlab.msu.edu/villalb7/Pavement-Crack-Detection/-/blob/main/INSTALL.md) for more information on installation and setup
 
 
 
@@ -57,10 +57,8 @@ view `INSTALL.md` for more information on installation and setup
 
 2. Move into the Pavement-Crack-Detection folder: `cd Pavement-Crack-Detection`
 
-3. Make a `data` folder in the repository: `mkdir data`
+3. Move the `.tif` image into the `data` folder that is to be thresholded
 
-4. Upload the `.tif` image into the `data` folder that is to be thresholded
+4. Now the environment is set up for the jupyter notebook. While in the Pavement-Crack-Detection folder, open jupyter notebook locally from your terminal.
 
-5. Now the environment is set up for the jupyter notebook. While in the Pavement-Crack-Detection folder, open jupyter notebook locally from your terminal.
-
-6. Open the `InteractiveCrackDetection.ipynb` and follow along with the image segmentation and thresholding steps in the notebook.
+5. Open the `InteractiveCrackDetection.ipynb` and follow along with the steps in the notebook.
