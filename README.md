@@ -68,6 +68,9 @@ View [`INSTALL.md`](https://gitlab.msu.edu/villalb7/Pavement-Crack-Detection/-/b
 
 Projects that can expand on this asphalt pavement crack detection repository:
 
+* classify the crack severity
+    * use a heat map to show location and severity of crack in pavement
+    
 * calculate lineal footage of the cracks in images
     * utilize an image reference scale to calculate crack length
 
