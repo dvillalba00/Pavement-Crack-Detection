@@ -5,7 +5,8 @@ Crack Detection software for SME
 # Table of Contents
 * [Project Description](#project-description)
 * [Installation](#installation)
-* [Running the project](#running-the-project)
+* [Running the Project](#running-the-project)
+* [Future Work](#future-work)
 
 
 
@@ -39,7 +40,7 @@ Analyze the images from drone footage provided by SME identify cracks in asphalt
 
 ## Installation
 
-view [`INSTALL.md`](https://gitlab.msu.edu/villalb7/Pavement-Crack-Detection/-/blob/main/INSTALL.md) for more information on installation and setup
+View [`INSTALL.md`](https://gitlab.msu.edu/villalb7/Pavement-Crack-Detection/-/blob/main/INSTALL.md) for more information on installation and setup
 
 
 
@@ -62,3 +63,13 @@ view [`INSTALL.md`](https://gitlab.msu.edu/villalb7/Pavement-Crack-Detection/-/b
 4. Now the environment is set up for the jupyter notebook. While in the Pavement-Crack-Detection folder, open jupyter notebook locally from your terminal.
 
 5. Open the `InteractiveCrackDetection.ipynb` and follow along with the steps in the notebook.
+
+## Future Work
+
+Projects that can expand on this asphalt pavement crack detection repository:
+
+* calculate lineal footage of the cracks in images
+    * utilize an image reference scale to calculate crack length
+
+* use image classification to identify ares of image that are pavement and are not pavement
+    * may be on segmented parts of image or entire image
