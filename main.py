@@ -1,4 +1,5 @@
 import os
+from skimage import io
 from skimage.filters import threshold_multiotsu
 from src.CreateImageDict import createImageDict
 from src.StitchImageDict import stitchImageDict
@@ -53,5 +54,5 @@ for key in image_dict:
     saveDictionary(image_dict[key]["cut_image_dict"], dir_path, image_dict[key]["cut_path"], "cut_image")
     # thresholded_dict = thresholdCutImages(cut_img_dict, thresholding_function) # run cut images through threshold function
     saveDictionary(image_dict[key]["thresholded_dict"], dir_path, image_dict[key]["thresholded_cut_path"], "threshold_image")
-    image_dict[key]["stitched_dict"] = stitchImageDict(image_dict[key]["thresholded_dict"]) # stitch the cut thresholded images back together
-    saveDictionary(image_dict[key]["stitched_dict"], dir_path, image_dict[key]["stitched_path"], "stitched_image")
+    stitched_image = stitchImageDict(image_dict[key]["thresholded_dict"]) # stitch the cut thresholded images back together
+    io.imsave(os.path.join(dir_path, image_dict[key]["stitched_path"], key), stitched_image, check_contrast=False)
