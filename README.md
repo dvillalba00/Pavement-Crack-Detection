@@ -64,6 +64,26 @@ View [`INSTALL.md`](https://gitlab.msu.edu/villalb7/Pavement-Crack-Detection/-/b
 
 5. Open the `InteractiveCrackDetection.ipynb` and follow along with the steps in the notebook.
 
+#### Thresholding Functions
+
+One of the benefits of our code is the use of custom thresholding functions. Any thresholding function can be passed in easily by setting the value `thresholding_function` under the **Globals** section in our interactive notebook. That said, some thresholding functions may not work with our code. It is possible to make these work using `try` and `except`, but it was determined that the code should not do this.
+
+We tried the different thresholding functions from `skimage.filters`.
+
+**Thresholding Functions that Work**
+* threshold_yen
+* threshold_multiotsu
+* threshold_otsu
+* threshold_isodata
+* threshold_li
+* threshold_mean
+* threshold_triangle
+
+**Thresholding Functions that do not Work**
+* threshold_minimum
+
+Other thresholding functions can be used and most should work.
+
 ## Future Work
 
 Projects that can expand on this asphalt pavement crack detection repository:
