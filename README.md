@@ -48,21 +48,29 @@ View [`INSTALL.md`](https://gitlab.msu.edu/villalb7/Pavement-Crack-Detection/-/b
 
 #### Code
 
-* `InteractiveCrackDetection.ipynb`: jupyter notebook containing code that walks through each step of our image segmentation and thresholding process. Comments are included in the notebook for users to understand each step in our model from beginning to end. 
+* `InteractiveCrackDetection.ipynb`: jupyter notebook containing code that walks through each step of our image segmentation and thresholding process. Comments are included in the notebook for users to understand each step in our model from beginning to end.
+
+* `TestingAccuracy.ipynb`: Jupyter notebook containing code that tests the accuracy of the crack detection program comparing the thresholded image with the ground truth image that we hand traced over data images.
+
+* `DetectPavementCracks.py`: end to end version of the software that runs through images in the `data/raw_images` folder and returns segmented and stitched thresholded images in the `results` folder.
 
 * `src`: directory containing the functions created for and used in executing `InteractiveCrackDetection.ipynb`
 
 #### Running the code
 
-1. Clone the repository locally: `git clone https://gitlab.msu.edu/villalb7/Pavement-Crack-Detection.git`
+1. Clone the repository locally: `git clone https://gitlab.msu.edu/villalb7/Pavement-Crack-Detection.git`.
 
-2. Move into the Pavement-Crack-Detection folder: `cd Pavement-Crack-Detection`
+2. Move into the Pavement-Crack-Detection folder: `cd Pavement-Crack-Detection`.
 
-3. Move the `.tif` image into the `data` folder that is to be thresholded
+3. Create a `data/raw_images` folder in the root of the project.
 
-4. Now the environment is set up for the jupyter notebook. While in the Pavement-Crack-Detection folder, open jupyter notebook locally from your terminal.
+4. Move the `.tif` images into the `data/raw_images` folder that is to be thresholded.
 
-5. Open the `InteractiveCrackDetection.ipynb` and follow along with the steps in the notebook.
+5. Now the environment is set up for the jupyter notebook. While in the Pavement-Crack-Detection folder, open jupyter notebook locally from your terminal.
+
+6. Open the `InteractiveCrackDetection.ipynb` and follow along with the steps in the notebook.
+
+7. Alternatively, you can run the `DetectPavementCracks.py` file and have the program do all the steps for you without looking at what it's doing.
 
 #### Thresholding Functions
 

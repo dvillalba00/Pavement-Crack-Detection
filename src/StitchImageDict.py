@@ -1,6 +1,4 @@
-from skimage import io
 import numpy as np
-import os
 
 def stitchRows(img_dict, row, startx = 0, stopx = 24):
     temp_row = img_dict[(row,0)].copy()
