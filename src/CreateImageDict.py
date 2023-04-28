@@ -1,6 +1,13 @@
 import os
 
 def createImageDict(image_dict, IMAGES):
+  '''
+  Creates a dictionary of all the images the program will be using
+
+  Params:
+    image_dict: instantiated image dictionary in the DetectPavementCracks.py file
+    IMAGES: list that contains all the image names in the data/raw_images folder
+  '''
   for image in IMAGES:
       # Name the image
       image_dict[image] = {}

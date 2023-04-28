@@ -3,14 +3,16 @@ from skimage import io
 
 def loadImage(IMAGE_FILE, DIVIDE_X, DIVIDE_Y):
     '''
+    Loads an image and segments that image based on the DIVIDE_X and DIVIDE_Y constants
 
     Args:
         IMAGE_FILE: the image to be loaded
-        DIVIDE_X:
-        DIVIDE_Y:
+        DIVIDE_X: number of divisions in the x axis for the image
+        DIVIDE_Y: number of divisions in the y axis for the image
 
     Returns:
-
+        cut_img_dict: dictionary of the segmented image with the key being a tuple of 2 indices
+            and the value being an array of the image
     '''
     # Read in the image file.
     img = io.imread(IMAGE_FILE)

@@ -1,6 +1,16 @@
 import numpy as np
 
 def thresholdCutImages(cut_img_dict, thresholding_function):
+    '''
+    Thresholds the cut_img_dict using the provided thresholding function
+
+    params:
+        cut_img_dict: segmented dictionary that will be used for thresholding
+        thresholding_function: provided thresholding function to apply to the cut_img_dict arrays
+
+    returns:
+        dictionary of a thresholded version of the original cut_img_dict
+    '''
     thresholded_dict = {}
     for key in cut_img_dict:
         if len(np.unique(cut_img_dict[key])) < 3:
